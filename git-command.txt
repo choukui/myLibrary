@@ -1,0 +1,101 @@
+在github的html页面url前面加上htmlpreview.github.io/?就能正常看到html页面了。
+
+
+Windows版的Git，从http://msysgit.github.io/下载，然后按默认选项安装即可。
+安装完成后：
+	
+	$ git config --global urser.nama "Your Name"
+	$ git config --global urser.email "email@example.com"
+
+
+git 命令提示：
+
+初始化git仓库：			$ git init
+
+把文件添加到仓库：	$ git add file.name
+
+把文件提交到仓库：	$ git commit -m "文件注释"
+
+查看仓库当前状态:	$ git status
+
+查看文件的不同：	$ git diff
+
+查看历史纪录：		$ git log	$ git log --pretty=oneline
+
+回退版本：		$ git reset --hard HEAD^    $ git reset --hard commit_id
+
+查看文件内容		$ cat readme.txt
+
+查看历史命令		$ git reflog
+
+查看工作区和版本库
+里面最新版本的区别 	$ git diff HEAD -- readme.txt 
+
+丢弃工作区的修改	$ git checkout -- readme.txt
+恢复到最新版本		$ git checkout -- readme.txt
+
+删除文件		$ git rm test.txt
+
+创建SSH Key		$ ssh-keygen -t rsa -C "youremail@example.com"
+
+本地仓库与github关联	$ git remote add origin git@github.com:githubname/object.git
+
+解除本地仓库与
+github关联		$ git remote remove origin
+
+
+可以把本地库的所有
+内容推送到远程库上	$ git push -u origin master
+
+克隆到本地库		$ git clone git@github.com:michaelliao/gitskills.git
+
+创建+切换分支		$ git checkout -b branch
+
+查看分支		$ git branch
+
+创建分支		$ git branch <name>
+
+切换分支		$ git checkout <name>
+
+合并某分支到当前分支	$ git merge <name>
+
+删除分支		$ git branch -d <name>
+
+强行删除分支		$ git branch -D <name>
+
+查看分支合并图		$ git log --graph	
+			$ git log --graph --pretty=oneline --abbrev-commit
+
+储藏工作		$ git stash
+
+查看工作现场		$ git stash list
+
+恢复工作现场		$ git stash apply stash内容不删除
+			$ git stash drop stash内容删除
+
+查看远程库的信息	$ git remote
+
+查看远程库的详细信息	$ git remote -v
+
+克隆远程库		$ git clone git@github.com:michaelliao/learngit.git
+
+在本地创建和远程
+分支对应的分支		$ git checkout -b branch-name origin/branch-name
+
+建立本地分支和远程
+分支的关联		git branch --set-upstream branch-name origin/branch-name
+
+抓取远程仓库信息	$ git pull
+
+创建标签		$ git tag <name>
+
+查看标签		$ git tag
+
+删除标签		$ git tag -d <name>
+
+推送标签到远程库	$ git push origin <tagname>
+
+一次性推送全部本地标签	$ git push origin --tags
+
+删除一个远程标签	$ git push origin :refs/tags/<tagname>
+
