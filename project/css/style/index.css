@@ -1,16 +1,11 @@
-#header h1 {
-  font-size: 26px;
-  font-weight: bold;
+#header {
+  border-right: 1px solid #666;
 }
-#header p {
-  font-size: 12px;
-}
-#header p a {
-  text-decoration: none;
-}
-#header p a:hover {
-  border-width: 1px;
-}
-.box {
-  border-radius: 5px;
+#footer {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  border-bottom: 1px solid #666;
 }

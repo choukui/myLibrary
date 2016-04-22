@@ -23,7 +23,7 @@ gulp.task('build:css', function(){
 			removeAllComments: true
 		})
 	];
-	return gulp.src(['css/less/*.less'])
+	return gulp.src(['css/less/*.less','!css/less/base.less'])
 		.pipe(less())
 		.pipe(gulp.dest('css/style'))
 		.pipe(gulp_postcss(processors))
@@ -31,6 +31,7 @@ gulp.task('build:css', function(){
 		.on('error', errorHandler)
 		.pipe(rename({suffix: ".min"}))
 		.pipe(gulp.dest('./css'))
+		.pipe(browserSync.stream())
 });
 
  //Static server
@@ -58,9 +59,9 @@ gulp.task('watch', function () {
 		'!css/main.min.css',
 		'pages/*.html',
 		'js/*.js'
-	], ['build:css','browser-sync']);
+	], ['build:css']);
 });
-gulp.task('default', ['build:css','browser-sync','watch']);
+gulp.task('default', ['watch','browser-sync']);
 function errorHandler(error){
 	this.emit('end');
 }
