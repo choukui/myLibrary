@@ -12,7 +12,7 @@ var rename       = require('gulp-rename');
 var csswring     = require('csswring');
 var concat       = require('gulp-concat');
 var px2rem       = require("postcss-px2rem");
-var less   		  = require("gulp-less");
+var sass = require('gulp-sass');
 
 gulp.task('build:css', function(){
 	var processors = [
@@ -23,8 +23,8 @@ gulp.task('build:css', function(){
 			removeAllComments: true
 		})
 	];
-	return gulp.src(['css/less/*.less','!css/less/base.less'])
-		.pipe(less())
+	return gulp.src(['css/sass/*.scss','!css/sass/base.scss'])
+		.pipe(sass())
 		.pipe(gulp.dest('css/style'))
 		.pipe(gulp_postcss(processors))
 		.pipe(concat('main.css'))
@@ -47,15 +47,9 @@ gulp.task('browser-sync', function() {
 		}
 	});
 });
- //Domain server
-//gulp.task('browser-sync', function() {
-//    browserSync.init({
-//        proxy: "你自己的ip"
-//    });
-//});
 gulp.task('watch', function () {
 	gulp.watch([
-		'css/less/*.less',
+		'css/sass/*.scss',
 		'!css/main.min.css',
 		'pages/*.html',
 		'js/*.js'

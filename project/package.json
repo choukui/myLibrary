@@ -13,9 +13,9 @@
     "browser-sync": "^2.11.2",
     "csswring": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-less": "^3.0.5",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
     "postcss": "^5.0.11",
     "postcss-px2rem": "^0.2.0",
     "px2rem": "^0.4.1"
