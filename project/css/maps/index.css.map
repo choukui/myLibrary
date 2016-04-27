@@ -1,0 +1,1 @@
+{"version":3,"file":"../index.css","sources":["index.scss"],"sourcesContent":["$fontSize: 72px;\r\nbody{\r\n  font-size:$fontSize;\r\n}"],"mappings":"AACA,AAAA,IAAI,CAAA;EACF,SAAS,EAFA,IAAI,GAGd","names":[]}

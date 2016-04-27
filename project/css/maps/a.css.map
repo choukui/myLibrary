@@ -1,0 +1,1 @@
+{"version":3,"file":"../a.css","sources":["a.scss"],"sourcesContent":["$font: 7px;\r\n$color:green;\r\n.div{\r\n  font-size:$font;\r\n  color: $color;\r\n}"],"mappings":"AAEA,AAAA,IAAI,CAAA;EACF,SAAS,EAHJ,GAAG;EAIR,KAAK,EAHA,KAAK,GAIX","names":[]}
