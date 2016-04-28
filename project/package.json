@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^2.4.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-px3rem": "^0.2.2",
     "gulp-rename": "^1.2.2",
