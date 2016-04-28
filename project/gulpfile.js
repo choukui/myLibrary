@@ -29,8 +29,8 @@ gulp.task("sass",function(){
 gulp.task('px3rem',["sass"],function(){
 	gulp.src('css/main.css')
 			.pipe(px3rem({remUnit: 72 }))//转化基值72，不写默认为75
-			.pipe(minifyCss())
-			.pipe(rename('main.min.css'))//重命名文件
+			//.pipe(minifyCss())
+			.pipe(rename('main.merge.css'))//重命名文件
 			.pipe(gulp.dest('./css'))
 });
 
