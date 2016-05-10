@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/************* Reset CSS *************/
+/* 清除内外边距 */
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset,iframe, lengend, label, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+h1 ,h2 ,h3 ,h4, h5, h6 { font-size: 100%; }
+h3{
+    font-weight: normal;
+}
+address, cite, dfn, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none;color: inherit; }
+a:hover { text-decoration: none; }
+a{
+	-webkit-tap-highlight-color:rgba(255,255,255,0)
+}
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img, button{ border: none;}
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+textarea {
+	resize: none;
+}
+input, select, textarea,button{
+	outline: 0;
+	-webkit-user-modify: read-write-plaintext-only;/* 1*/
+	font-family: "微软雅黑";
+	border:none;
+}
+img, iframe, table, form{ vertical-align: top;}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/************* Reset CSS *************/
+.clearfix {zoom: 1; }
+.clearfix:after, .clearfix:before {content: "\200B"; display: block; height: 0; visibility: hidden; }
+.clearfix:after {clear: both; }
+/* Global:常用样式 */
+.fl{ float:left;}
+.fr{ float:right;}
+/*.clearfix{display: block; display: table; *display: inline-block; _height: 1%;}/!*清浮动*!/*/
+/*.clearfix:after {content:'\20'; display:block; clear:both;}/!*清浮动*!/*/
+.clearself{ overflow:hidden; _overflow:visible; _height:1%;}
+.inline-block-parent{font-size: 0;word-spacing: -1px;}
+.inline-block{display:inline-block;*zoom: 1;*display: inline;vertical-align:middle;overflow:hidden;}
+.justify{ text-align: justify; text-justify: inter-ideograph;}
+.clear { font-size: 0; height: 0; line-height: 0; overflow: hidden; clear: both;}
+.marginAuto{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.verCenter{
+	position: absolute;  top: 50%;
+	-webkit-transform: translate(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);}
+.verLRCenter{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);}
+
+/* end Global */
+
+body{
+	font-family: 'MicrosoftYaHei';
+}
+/*common样式*/

@@ -16,6 +16,8 @@ git 命令提示：
 
 把文件提交到仓库：	$ git commit -m "文件注释"
 
+添加并提交文件：	$ git commit -a
+
 查看仓库当前状态:	$ git status
 
 查看文件的不同：	$ git diff

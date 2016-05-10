@@ -44,17 +44,17 @@ gulp.task('minify-js', function () {
 });
 
 //图片压缩,个人认为目前不需要压缩图片，上线之前一次性压缩比较好
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant'); //png图片压缩插件
-
-gulp.task('imgMinify', function () {
-	return gulp.src('images/src/*')
-			.pipe(imagemin({
-				progressive: true,
-				use: [pngquant()] //使用pngquant来压缩png图片
-			}))
-			.pipe(gulp.dest('./images'));
-});
+//var imagemin = require('gulp-imagemin');
+//var pngquant = require('imagemin-pngquant'); //png图片压缩插件
+//
+//gulp.task('imgMinify', function () {
+//	return gulp.src('images/src/*')
+//			.pipe(imagemin({
+//				progressive: true,
+//				use: [pngquant()] //使用pngquant来压缩png图片
+//			}))
+//			.pipe(gulp.dest('./images'));
+//});
 
 
 //Static server
