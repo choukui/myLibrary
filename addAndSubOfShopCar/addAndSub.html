@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<title>购物车的加减计算器</title>
+	<style>
+		/*重置input样式*/
+		*{  margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box; }
+		input,button{  outline: 0;
+			-webkit-user-modify: read-write-plaintext-only;/* 1*/
+			font-family: "微软雅黑";
+			border:none;  }
+
+		/*按钮样式*/
+		.addAndSub {
+			height: 52px;
+			margin-top: 16px;
+			display: inline-block;
+			font-size: 0;
+			overflow: hidden;
+			border: 1px solid #acacac;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px; }
+		.addAndSub .add,.addAndSub .sub {
+			width: 52px; }
+		.addAndSub .val {
+			width: 63px;
+			border-right: 1px solid #acacac;
+			border-left: 1px solid #acacac;
+		}
+		.addAndSub .active {
+			color: #ff8400; }
+		.addAndSub > input {
+			background-color: inherit;
+			height: 52px;
+			text-align: center;
+			line-height: 52px;
+			color: #868686;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+<span class="addAndSub">
+	<input class="sub" type="button" value="-"/>
+	<input class="val" type="text" disabled value="1"/>
+	<input class="add" type="button" value="+"/>
+</span>
+</body>
+<script>
+	$(function(){
+		(function(){
+			var $_val = $(".val");
+			$(".sub").on("click",function(){
+				$(this).addClass("active").siblings(".add").removeClass("active");
+				if ($_val.val()<1){return false}
+				var $val = $_val.val()-1;
+				$_val.val($val);
+				return;
+			});
+			$(".add").on("click",function(){
+				$(this).addClass("active").siblings(".sub").removeClass("active");
+				var $val = Number($_val.val());
+				$_val.val($val+1);
+				return;
+			});
+		})();
+	})
+</script>
+</html>
