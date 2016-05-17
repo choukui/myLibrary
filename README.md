@@ -4,6 +4,6 @@
 
 插件名称对照表：
 
-1:  select -- 下拉框差价；
+1： select -- 下拉框差价；
 
 2： addAndSubOfShopCar -- 购物车加减按钮插件；
