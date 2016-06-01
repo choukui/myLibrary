@@ -32,6 +32,24 @@
                 return document.defaultView.getComputedStyle (obj,null)[prop];
             }
             return null;
+        },
+        /*判断是否为ie，如果是则给body添加对应的类名*/
+        judegIE:function (){
+            var str = window.navigator.userAgent.toLowerCase();
+            var obj = document.getElementsByTagName("body")[0];
+            if (str.indexOf('msie')!=-1) {
+                if(str.indexOf('msie 6')!=-1){
+                    obj.setAttribute("class", "ie ie6");
+                }else if(str.indexOf('msie 7')!=-1){
+                    obj.setAttribute("class", "ie ie7");
+                }else if(str.indexOf('msie 8')!=-1){
+                    obj.setAttribute("class", "ie ie8");
+                }else if(str.indexOf('msie 9')!=-1){
+                    obj.setAttribute("class", "ie ie9");
+                }else if(str.indexOf('msie 10')!=-1){
+                    obj.setAttribute("class", "ie ie10");
+                }
+            }
         }
     };
 
